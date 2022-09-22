@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dhandev.n2000">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/g1122"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/g1122"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Poisueille"
+            android:exported="false" />
+        <activity android:name=".Kacamata"
+            android:exported="false" />
+        <activity android:name=".Keker"
+            android:exported="false" />
+        <activity android:name=".HukumKepplerVar"
+            android:exported="false" />
+        <activity android:name=".GasIdealVariabel"
+            android:exported="false" />
+        <activity android:name=".GravitasiVariabel"
+            android:exported="false" />
+        <activity android:name=".RadioAktif"
+            android:exported="false" />
+        <activity android:name=".EnergiIkat"
+            android:exported="false" />
+        <activity android:name=".Kuantum"
+            android:exported="false"/>
+        <activity android:name=".Optik"
+            android:exported="false" />
+        <activity android:name=".GeraklurusBeraturan"
+            android:exported="false" />
+        <activity android:name=".MasterLayout"
+            android:exported="false" />
+        <activity android:name=".InformasiProduk"
+            android:exported="false" />
+        <activity android:name=".DeltaStar"
+            android:exported="false"/>
+        <activity android:name=".ArusBolakBalik"
+            android:exported="false"/>
+        <activity android:name=".PindahPanas"
+            android:exported="false" />
+        <activity android:name=".Relativitas"
+            android:exported="false"/>
+        <activity android:name=".FisikaInti"
+            android:exported="false" />
+        <activity android:name=".AtomBohr"
+            android:exported="false"/>
+        <activity android:name=".FotoListrik"
+            android:exported="false"/>
+        <activity android:name=".InduksiElektroMagnet"
+            android:exported="false" />
+        <activity android:name=".MedanMagnet"
+            android:exported="false" />
+        <activity android:name=".HukumGauss"
+            android:exported="false" />
+        <activity android:name=".HukumCoulomb"
+            android:exported="false" />
+        <activity android:name=".Gelombang"
+            android:exported="false"/>
+        <activity android:name=".Termodinamika"
+            android:exported="false" />
+        <activity android:name=".GasIdeal"
+            android:exported="false" />
+        <activity android:name=".Hidrodinamik"
+            android:exported="false" />
+        <activity android:name=".Hidrostatik"
+            android:exported="false" />
+        <activity android:name=".Setimbang"
+            android:exported="false" />
+        <activity android:name=".TranslasiRotasi"
+            android:exported="false" />
+        <activity android:name=".DinamikaRotasi"
+            android:exported="false" />
+        <activity android:name=".Momentum"
+            android:exported="false" />
+        <activity android:name=".Energi"
+            android:exported="false" />
+        <activity android:name=".Usaha"
+            android:exported="false" />
+        <activity android:name=".Osilasi"
+            android:exported="false" />
+        <activity android:name=".HukumHooke"
+            android:exported="false" />
+        <activity android:name=".Elastisitas"
+            android:exported="false" />
+        <activity android:name=".Gravitasi"
+            android:exported="false" />
+        <activity android:name=".HukumKepler"
+            android:exported="false" />
+        <activity android:name=".GerakParabola"
+            android:exported="false" />
+        <activity android:name=".RangkaianHambatan"
+            android:exported="false" />
+        <activity android:name=".SeriParalel"
+            android:exported="false" />
+        <activity android:name=".HukumOhm"
+            android:exported="false" />
+        <activity android:name=".Kalori"
+            android:exported="false" />
+        <activity android:name=".Pemuaian"
+            android:exported="false" />
+        <activity android:name=".TermoMeter"
+            android:exported="false" />
+        <activity android:name=".Teropong"
+            android:exported="false" />
+        <activity android:name=".Mikroskop"
+            android:exported="false" />
+        <activity android:name=".Lup"
+            android:exported="false" />
+        <activity android:name=".CerminLensa"
+            android:exported="false"/>
+        <activity android:name=".HukumNewton"
+            android:exported="false" />
+        <activity android:name=".GerakMelingkar"
+            android:exported="false" />
+        <activity android:name=".GerakLurus"
+            android:exported="false" />
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
