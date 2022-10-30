@@ -106,236 +106,236 @@ public class ArusBolakBalik extends AppCompatActivity {
             }});
 
         btnXL.setOnClickListener ( new View.OnClickListener ( ) {
-                                       @Override
-                public void onClick ( View view ) {
-               DecimalFormat df = new DecimalFormat ( "#.#####" );
+            @Override
+            public void onClick ( View view ) {
+                DecimalFormat df = new DecimalFormat ( "#.#####" );
 
-              if
-                             (!L.getText ( ).toString ( ).equals ( "" )   &&
-                          !omega.getText ( ).toString ( ).equals ( "" )) {
-                          LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                      omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
-                      LL = LL/1000;
+                    LL = LL/1000;
 
-             tampilan1.setText ( " Xl = j omega L" );
-              Xl = omega2 * LL;
-             tampilan2.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-            } else
-             if
-                           (!L.getText ( ).toString ( ).equals ( "" )   &&
-                         !freq.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                     freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-                 LL = LL/1000;
-            tampilan1.setText ( " Xl = j 2 pi freg L" );
-            Xl = 6.28*freq2 * LL;
-            tampilan2.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
-             } }}
+                    tampilan1.setText ( " Xl = j omega L" );
+                    Xl = omega2 * LL;
+                    tampilan2.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                } else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    LL = LL/1000;
+                    tampilan1.setText ( " Xl = j 2 pi freg L" );
+                    Xl = 6.28*freq2 * LL;
+                    tampilan2.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
+                } }}
         );
 
-   btnXC.setOnClickListener ( new View.OnClickListener ( ) {
-          @Override
-         public void onClick ( View view ) {
-         DecimalFormat df = new DecimalFormat ( "#.#####" );
-           if
-                         (!C.getText ( ).toString ( ).equals ( "" )   &&
-                      !omega.getText ( ).toString ( ).equals ( "" )) {
-                  CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                  omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                  CC =CC/1000000;
-
-
-           tampilan1.setText ( " Xc = -j 1/omega C" );
-                    Xc = 1/(omega2 * CC);
-           tampilan2.setText ( " Xc = -j  " + df.format ( Xc ) + "ohm" );
-
-          } else
-         if
-                       (!C.getText ( ).toString ( ).equals ( "" )   &&
-                     !freq.getText ( ).toString ( ).equals ( "" )) {
+        btnXC.setOnClickListener ( new View.OnClickListener ( ) {
+            @Override
+            public void onClick ( View view ) {
+                DecimalFormat df = new DecimalFormat ( "#.#####" );
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )) {
                     CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                 freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-             CC =CC/1000000;
-             tampilan1.setText ( " Xc = -j 1/ (2 pi freg C)" );
-           Xc = 1/(6.28*freq2 * CC);
-          tampilan2.setText ( " Xc = - j" + df.format ( Xc ) + "ohm" );
-         } }}
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC =CC/1000000;
+
+
+                    tampilan1.setText ( " Xc = -j 1/omega C" );
+                    Xc = 1/(omega2 * CC);
+                    tampilan2.setText ( " Xc = -j  " + df.format ( Xc ) + "ohm" );
+
+                } else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    CC =CC/1000000;
+                    tampilan1.setText ( " Xc = -j 1/ (2 pi freg C)" );
+                    Xc = 1/(6.28*freq2 * CC);
+                    tampilan2.setText ( " Xc = - j" + df.format ( Xc ) + "ohm" );
+                } }}
         );
 
- btnZ.setOnClickListener ( new View.OnClickListener ( ) {
-         @Override
-         public void onClick ( View view ) {
-         DecimalFormat df = new DecimalFormat ( "#.#####" );
-         if
-           (!C.getText ( ).toString ( ).equals ( "" )   &&
-                   !omega.getText ( ).toString ( ).equals ( "" )   &&
-                   !L.getText ( ).toString ( ).equals ( "" )   &&
-                   !r.getText ( ).toString ( ).equals ( "" )) {
-               CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-               LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-               rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-               omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-             CC = CC/1000000;
-             LL = LL/1000;
+        btnZ.setOnClickListener ( new View.OnClickListener ( ) {
+            @Override
+            public void onClick ( View view ) {
+                DecimalFormat df = new DecimalFormat ( "#.#####" );
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    LL = LL/1000;
 
 
-             tampilan1.setText ( " Xl = j omega L" );
-             tampilan2.setText ( " Xc = -j 1/omega C" );
-             tampilan3.setText ( " Z kompleks =  R + (Xl - Xc)" );
-             tampilan4.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-             tampilan6.setText ( " R = " + df.format ( rr ) + "ohm" );
-                  Xc = 1/(omega2 * CC);
-             tampilan7.setText ( " Xc =-j" + df.format ( Xc ) + "ohm" );
-                  Xl = omega2 * LL;
-             tampilan8.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
-                  Xlc = Xl - Xc;
-             tampilan9.setText ( " Z = (" + df.format ( rr ) +"  +  " + "j" + df.format ( Xlc )  + ") ohm" );
-                  rr = Math.pow(rr,2);
+                    tampilan1.setText ( " Xl = j omega L" );
+                    tampilan2.setText ( " Xc = -j 1/omega C" );
+                    tampilan3.setText ( " Z kompleks =  R + (Xl - Xc)" );
+                    tampilan4.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan6.setText ( " R = " + df.format ( rr ) + "ohm" );
+                    Xc = 1/(omega2 * CC);
+                    tampilan7.setText ( " Xc =-j" + df.format ( Xc ) + "ohm" );
+                    Xl = omega2 * LL;
+                    tampilan8.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
+                    Xlc = Xl - Xc;
+                    tampilan9.setText ( " Z = (" + df.format ( rr ) +"  +  " + "j" + df.format ( Xlc )  + ") ohm" );
+                    rr = Math.pow(rr,2);
                     Xlc = Math.pow(Xlc,2);
-                     Z = rr + Xlc;
-                     Z = Math.pow(Z,0.5);
-             tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                    Z = rr + Xlc;
+                    Z = Math.pow(Z,0.5);
+                    tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
 
-        } else
-   if
-       (!C.getText ( ).toString ( ).equals ( "" )   &&
-               !omega.getText ( ).toString ( ).equals ( "" )   &&
-               !r.getText ( ).toString ( ).equals ( "" )) {
-           CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-           rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-           omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-       CC = CC/1000000;
+                } else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
 
-       tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
-       tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-       tampilan3.setText ( " Xl = j omega L" );
-       tampilan4.setText ( " Xc = -j 1/omega C" );
-       tampilan5.setText ( " karena L = 0" );
-       tampilan6.setText ( " karena L = 0, maka Z = ( R^2 + (Xc)^2 )^0,5" );
+                    tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
+                    tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C" );
+                    tampilan5.setText ( " karena L = 0" );
+                    tampilan6.setText ( " karena L = 0, maka Z = ( R^2 + (Xc)^2 )^0,5" );
 
-           Xc = 1/(omega2 * CC);
-       tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
-       tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) + "-j " +df.format(Xc) +"ohm" );
-           rr = Math.pow(rr,2);
-           Xc = Math.pow(Xc,2);
-           Z = rr + Xc;
-           Z = Math.pow(Z,0.5);
+                    Xc = 1/(omega2 * CC);
+                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) + "-j " +df.format(Xc) +"ohm" );
+                    rr = Math.pow(rr,2);
+                    Xc = Math.pow(Xc,2);
+                    Z = rr + Xc;
+                    Z = Math.pow(Z,0.5);
 
-           tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
-       } else
-       if
-           (!L.getText ( ).toString ( ).equals ( "" )   &&
-                   !omega.getText ( ).toString ( ).equals ( "" )   &&
-                   !r.getText ( ).toString ( ).equals ( "" )) {
-               LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-               rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-               omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-
-
-           LL = LL/1000;
-
-           tampilan1.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-           tampilan2.setText ( " Xl = j omega L" );
-           tampilan3.setText ( " Xc = -j 1/omega C" );
-           tampilan4.setText ( " karena C = 0, maka" );
-           tampilan5.setText ( " Z = ( R^2 + (Xl)^2 )^0,5" );
-
-           Xl = omega2 * LL;
-           tampilan7.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
-           tampilan8.setText ( " Zkompleks = " + df.format ( rr ) +"j"+ df.format ( Xl ) + "ohm" );
-           rr = Math.pow(rr,2);
-           Xl = Math.pow(Xl,2);
-           Z = rr + Xl;
-           Z = Math.pow(Z,0.5);
-
-           tampilan8.setText ( " Z = " + df.format ( Z ) + "ohm" );
-       } else
-       if
-           (!C.getText ( ).toString ( ).equals ( "" )   &&
-                   !freq.getText ( ).toString ( ).equals ( "" )   &&
-                   !L.getText ( ).toString ( ).equals ( "" )   &&
-                   !r.getText ( ).toString ( ).equals ( "" )) {
-               CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-               LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-               rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-               freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-           CC = CC/1000000;
-           LL = LL/1000;
-
-           tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
-           tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-           tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-           tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-
-            Xc = 1/(6.28*freq2 * CC);
-            Xl = 6.28*freq2 * LL;
-           tampilan6.setText ( " Xc = " +"-j" + df.format ( Xc ) + "ohm" );
-           tampilan7.setText ( " Xl = " + "+ j"+ df.format ( Xl ) + "ohm" );
-           Xlc = Xl - Xc;
-          tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) +"+ j"+ df.format ( Xlc ) +") ohm" );
-
-          rr = Math.pow(rr,2);
-            Xlc = Math.pow(Xlc,2);
-            Z = rr + Xlc;
-             Z = Math.pow(Z,0.5);
-            tampilan11.setText ( " Z = " + df.format ( Z ) + "ohm" );
-            }
-       else
-       if
-           (!C.getText ( ).toString ( ).equals ( "" )   &&
-                   !freq.getText ( ).toString ( ).equals ( "" )   &&
-                   !r.getText ( ).toString ( ).equals ( "" )) {
-               CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-               rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-               freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-           CC = CC/1000000;
+                    tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                } else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
 
-           tampilan1.setText ( " Z kompleks = ( R + (Xl - Xc)" );
-           tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-           tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-           tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-           tampilan5.setText ( " L = 0, maka" );
-           tampilan6.setText ( " Z = ( R^2 + (Xc)^2 )^0,5" );
-           Xc = 1/(6.28*freq2 * CC);
-           tampilan7.setText ( " Xc = " +"-j" + df.format ( Xc ) + "ohm" );
-           tampilan8.setText ( " Zkompleks = (" + df.format ( rr ) +" -j"+ df.format ( Xc )+ ") ohm" );
-           rr = Math.pow(rr,2);
-           Xc = Math.pow(Xc,2);
-           Z = rr + Xc;
-           Z = Math.pow(Z,0.5);
-           tampilan9.setText ( " Z = " + df.format ( Z ) + "ohm" );
-       }
-       else
-       if
-           (!L.getText ( ).toString ( ).equals ( "" )   &&
-                   !freq.getText ( ).toString ( ).equals ( "" )   &&
-                   !r.getText ( ).toString ( ).equals ( "" )) {
-               LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-               rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-               freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    LL = LL/1000;
+
+                    tampilan1.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan2.setText ( " Xl = j omega L" );
+                    tampilan3.setText ( " Xc = -j 1/omega C" );
+                    tampilan4.setText ( " karena C = 0, maka" );
+                    tampilan5.setText ( " Z = ( R^2 + (Xl)^2 )^0,5" );
+
+                    Xl = omega2 * LL;
+                    tampilan7.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
+                    tampilan8.setText ( " Zkompleks = " + df.format ( rr ) +"j"+ df.format ( Xl ) + "ohm" );
+                    rr = Math.pow(rr,2);
+                    Xl = Math.pow(Xl,2);
+                    Z = rr + Xl;
+                    Z = Math.pow(Z,0.5);
+
+                    tampilan8.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                } else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    LL = LL/1000;
+
+                    tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
+                    tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+
+                    Xc = 1/(6.28*freq2 * CC);
+                    Xl = 6.28*freq2 * LL;
+                    tampilan6.setText ( " Xc = " +"-j" + df.format ( Xc ) + "ohm" );
+                    tampilan7.setText ( " Xl = " + "+ j"+ df.format ( Xl ) + "ohm" );
+                    Xlc = Xl - Xc;
+                    tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) +"+ j"+ df.format ( Xlc ) +") ohm" );
+
+                    rr = Math.pow(rr,2);
+                    Xlc = Math.pow(Xlc,2);
+                    Z = rr + Xlc;
+                    Z = Math.pow(Z,0.5);
+                    tampilan11.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                }
+                else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    CC = CC/1000000;
 
 
-           LL = LL/1000;
+                    tampilan1.setText ( " Z kompleks = ( R + (Xl - Xc)" );
+                    tampilan2.setText ( " Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+                    tampilan5.setText ( " L = 0, maka" );
+                    tampilan6.setText ( " Z = ( R^2 + (Xc)^2 )^0,5" );
+                    Xc = 1/(6.28*freq2 * CC);
+                    tampilan7.setText ( " Xc = " +"-j" + df.format ( Xc ) + "ohm" );
+                    tampilan8.setText ( " Zkompleks = (" + df.format ( rr ) +" -j"+ df.format ( Xc )+ ") ohm" );
+                    rr = Math.pow(rr,2);
+                    Xc = Math.pow(Xc,2);
+                    Z = rr + Xc;
+                    Z = Math.pow(Z,0.5);
+                    tampilan9.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                }
+                else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
 
-           tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
-           tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-           tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-           tampilan5.setText ( " C = 0, maka" );
-           tampilan6.setText ( " Z = ( R^2 + (Xl)^2 )^0,5" );
+
+                    LL = LL/1000;
+
+                    tampilan1.setText ( " Zkompleks = ( R + (Xl - Xc)" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+                    tampilan5.setText ( " C = 0, maka" );
+                    tampilan6.setText ( " Z = ( R^2 + (Xl)^2 )^0,5" );
 
 
-           Xl = 6.28*freq2 * LL;
-           tampilan8.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
-           tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) +"j"+ df.format ( Xl )+ ") ohm" );
-           rr = Math.pow(rr,2);
-           Xl = Math.pow(Xl,2);
-           Z = rr + Xlc;
-           Z = Math.pow(Z,0.5);
-           tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
-       }
-      }}
+                    Xl = 6.28*freq2 * LL;
+                    tampilan8.setText ( " Xl = j" + df.format ( Xl ) + "ohm" );
+                    tampilan9.setText ( " Zkompleks = (" + df.format ( rr ) +"j"+ df.format ( Xl )+ ") ohm" );
+                    rr = Math.pow(rr,2);
+                    Xl = Math.pow(Xl,2);
+                    Z = rr + Xlc;
+                    Z = Math.pow(Z,0.5);
+                    tampilan10.setText ( " Z = " + df.format ( Z ) + "ohm" );
+                }
+            }}
         );
         btnIrms.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
@@ -343,16 +343,16 @@ public class ArusBolakBalik extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat ( "#.#########" );
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
                     CC = CC/1000000;
                     LL = LL/1000;
@@ -373,14 +373,14 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan7.setText ( " Irms = " + df.format ( I ) + "ampere" );
                 } else
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
 
 
@@ -402,14 +402,14 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
                 } else
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
 
                     LL = LL/1000;
@@ -432,16 +432,16 @@ public class ArusBolakBalik extends AppCompatActivity {
                 } else
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
 
@@ -460,91 +460,91 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan6.setText ( " z = " + df.format ( Z ) + "ohm" );
                     tampilan7.setText ( " Irms = " + df.format ( I ) + "ampere" );
                 }
-                  else
+                else
 
-                    if
-                        (!C.getText ( ).toString ( ).equals ( "" )   &&
-                                !v.getText ( ).toString ( ).equals ( "" )   &&
-                                !freq.getText ( ).toString ( ).equals ( "" )   &&
-                                !r.getText ( ).toString ( ).equals ( "" )) {
-                            CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                            vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                            rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                            freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
 
-                        CC = CC/1000000;
+                    CC = CC/1000000;
 
-                        tampilan1.setText ( "  Irms = Vrms/ Z; " );
-                        tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                        tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-                        tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-                        tampilan5.setText ( " karena L = 0, maka" );
-                        tampilan6.setText ( "  Z = ( R^2 + Xc)^2 )^0,5" );
-                        Xc = 1 / (6.28 * freq2 * CC);
-                        rr = Math.pow ( rr , 2 );
-                        Xc = Math.pow ( Xc , 2 );
-                        Z = rr + Xc;
-                        Z = Math.pow ( Z , 0.5 );
-                        I = vv / Z;
-                        tampilan8.setText ( " z = " + df.format ( Z ) + "ohm" );
-                        tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
-                    }
-                    else
-                        if
-                                   (!L.getText ( ).toString ( ).equals ( "" )   &&
-                                    !v.getText ( ).toString ( ).equals ( "" )   &&
-                                    !freq.getText ( ).toString ( ).equals ( "" )   &&
-                                    !r.getText ( ).toString ( ).equals ( "" )) {
-                                LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                                vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                                rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                                freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    tampilan1.setText ( "  Irms = Vrms/ Z; " );
+                    tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+                    tampilan5.setText ( " karena L = 0, maka" );
+                    tampilan6.setText ( "  Z = ( R^2 + Xc)^2 )^0,5" );
+                    Xc = 1 / (6.28 * freq2 * CC);
+                    rr = Math.pow ( rr , 2 );
+                    Xc = Math.pow ( Xc , 2 );
+                    Z = rr + Xc;
+                    Z = Math.pow ( Z , 0.5 );
+                    I = vv / Z;
+                    tampilan8.setText ( " z = " + df.format ( Z ) + "ohm" );
+                    tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
+                }
+                else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
 
 
-                            LL = LL/1000;
+                    LL = LL/1000;
 
-                            tampilan1.setText ( "  Irms = Vrms/ Z; " );
-                            tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                            tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-                            tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-                            tampilan5.setText ( " karena C = 0, maka" );
-                            tampilan6.setText ( "  Z = ( R^2 + (Xl)^2 )^0,5" );
+                    tampilan1.setText ( "  Irms = Vrms/ Z; " );
+                    tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+                    tampilan5.setText ( " karena C = 0, maka" );
+                    tampilan6.setText ( "  Z = ( R^2 + (Xl)^2 )^0,5" );
 
-                            Xl = 6.28*freq2 * LL;
-                            rr = Math.pow(rr,2);
-                            Xl = Math.pow(Xl,2);
-                            Z = rr + Xl;
-                            Z = Math.pow(Z,0.5);
-                            I = vv/Z;
-                            tampilan8.setText ( " z = " + df.format ( Z ) + "ohm" );
-                            tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
+                    Xl = 6.28*freq2 * LL;
+                    rr = Math.pow(rr,2);
+                    Xl = Math.pow(Xl,2);
+                    Z = rr + Xl;
+                    Z = Math.pow(Z,0.5);
+                    I = vv/Z;
+                    tampilan8.setText ( " z = " + df.format ( Z ) + "ohm" );
+                    tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
                 }
 
-          else
-        if
-        (!C.getText ( ).toString ( ).equals ( "" )   &&
-                !v.getText ( ).toString ( ).equals ( "" )   &&
-                !freq.getText ( ).toString ( ).equals ( "" )) {
-            CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-            vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-            freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-            CC = CC/1000000;
+                else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    CC = CC/1000000;
 
 
-            tampilan1.setText ( "  Irms = Vrms/ Z; " );
-            tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-            tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
-            tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
-            tampilan5.setText ( " karena C = 0, maka" );
-            tampilan6.setText ( "  Z = ( R^2 + (Xl)^2 )^0,5" );
+                    tampilan1.setText ( "  Irms = Vrms/ Z; " );
+                    tampilan2.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan3.setText ( " Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( " Xc = -j 1/omega C = -j 1/(2pi f C)" );
+                    tampilan5.setText ( " karena C = 0, maka" );
+                    tampilan6.setText ( "  Z = ( R^2 + (Xl)^2 )^0,5" );
 
-            Xc = 1 / (6.28 * freq2);
+                    Xc = 1 / (6.28 * freq2);
 
-            I = vv / Xc;
-            tampilan8.setText ( " z = " + df.format ( Xc ) + "ohm" );
-            tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
+                    I = vv / Xc;
+                    tampilan8.setText ( " z = " + df.format ( Xc ) + "ohm" );
+                    tampilan9.setText ( " Irms = " + df.format ( I ) + "ampere" );
 
-        }}}
+                }}}
         );
         btnVL.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
@@ -552,16 +552,16 @@ public class ArusBolakBalik extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat ( "#.#####" );
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
 
@@ -588,14 +588,14 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan11.setText ( " VL = j " + df.format ( VL ) + "volt" );
                 } else
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
                     LL = LL/1000;
                     tampilan1.setText ( "  VL = I Xl" );
@@ -613,6 +613,7 @@ public class ArusBolakBalik extends AppCompatActivity {
                     Z = rr + Xl;
                     Z = Math.pow(Z,0.5);
                     I = vv/Z;
+                    Xl = Math.pow(Xl,0.5);
                     VL = I * Xl;
 
                     tampilan8.setText ( " Xc =  " + df.format ( Xc ) + "ohm" );
@@ -623,16 +624,16 @@ public class ArusBolakBalik extends AppCompatActivity {
 
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
                     tampilan1.setText ( "  VL = I Xl" );
@@ -649,6 +650,7 @@ public class ArusBolakBalik extends AppCompatActivity {
                     Z = rr + Xlc;
                     Z = Math.pow(Z,0.5);
                     I = vv/Z;
+
                     VL = I * Xl;
                     tampilan7.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
                     tampilan8.setText ( " Xc =  " + df.format ( Xc ) + "ohm" );
@@ -660,14 +662,14 @@ public class ArusBolakBalik extends AppCompatActivity {
 
 
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
 
                     LL = LL/1000;
                     tampilan1.setText ( "  VL = I Xl" );
@@ -685,6 +687,7 @@ public class ArusBolakBalik extends AppCompatActivity {
                     Z = rr + Xl;
                     Z = Math.pow(Z,0.5);
                     I = vv/Z;
+                    Xl = Math.pow(Xl,0.5);
                     VL = I * Xl;
                     tampilan8.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
                     tampilan9.setText ( " Z = j " + df.format ( Z ) + "ohm" );
@@ -698,24 +701,24 @@ public class ArusBolakBalik extends AppCompatActivity {
             @Override
             public void onClick ( View view ) {
                 DecimalFormat df = new DecimalFormat ( "#.#####" );
-                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                     CC = CC/1000000;
-                     LL = LL/1000;
-                     tampilan1.setText ( "  Vc = I Xc" );
-                     tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
-                     tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                     tampilan4.setText ( "  Xl = j omega L" );
-                     tampilan5.setText ( "  Xc = -j 1/(omega C) " );
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    LL = LL/1000;
+                    tampilan1.setText ( "  Vc = I Xc" );
+                    tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
+                    tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan4.setText ( "  Xl = j omega L" );
+                    tampilan5.setText ( "  Xc = -j 1/(omega C) " );
                     Xc = 1/(omega2 * CC);
                     Xl = omega2 * LL;
                     Xlc = Xl - Xc;
@@ -725,21 +728,21 @@ public class ArusBolakBalik extends AppCompatActivity {
                     Z = Math.pow(Z,0.5);
                     I = vv/Z;
                     Vc = I * Xc;
-                     tampilan7.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-                     tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
-                     tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
-                     tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
-                     tampilan11.setText ( " Vc = -j " + df.format ( Vc ) + "volt" );
+                    tampilan7.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
+                    tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
+                    tampilan11.setText ( " Vc = -j " + df.format ( Vc ) + "volt" );
                 } else
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
 
 
@@ -750,15 +753,16 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan5.setText ( "  Xc = -j 1/(omega C) " );
                     tampilan6.setText ( "  Z = ( R^2 + (Xc)^2 )^0,5" );
                     Xc = 1/(omega2 * CC);
-
+                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
                     rr = Math.pow(rr,2);
                     Xc = Math.pow(Xc,2);
                     Z = rr + Xc;
                     Z = Math.pow(Z,0.5);
+                    Xc = Math.pow(Xc,0.5);
                     I = vv/Z;
                     Vc = I * Xc;
 
-                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+
                     tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
                     tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
                     tampilan11.setText ( " Vc = j " + df.format ( Vc ) + "volt" );
@@ -766,16 +770,16 @@ public class ArusBolakBalik extends AppCompatActivity {
 
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
 
@@ -802,14 +806,14 @@ public class ArusBolakBalik extends AppCompatActivity {
                 else
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
 
 
@@ -820,14 +824,17 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan5.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
                     tampilan6.setText ( "  Z = ( R^2 + (Xc)^2 )^0,5" );
                     Xc = 1/(6.28*freq2 * CC);
+                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
                     rr = Math.pow(rr,2);
                     Xc = Math.pow(Xc,2);
                     Z = rr + Xc;
                     Z = Math.pow(Z,0.5);
                     I = vv/Z;
+                    Xc = Math.pow(Xc,0.5);
+
                     Vc = I * Xc;
 
-                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+
                     tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
                     tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
                     tampilan11.setText ( " Vc = -j " + df.format ( Vc ) + "volt" );
@@ -840,16 +847,16 @@ public class ArusBolakBalik extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat ( "#.#####" );
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !L.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !L.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
 
@@ -875,14 +882,14 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
                 } else
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
                     LL = LL/1000;
                     tampilan1.setText ( " Vr = I R" );
@@ -906,22 +913,22 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
                 } else
                 if
-                           (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
 
 
-                        tampilan1.setText ( " Vr = I R" );
-                        tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
-                        tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                        tampilan4.setText ( "  Xl = j omega L" );
-                        tampilan5.setText ( "  Xc = -j 1/(omega C) " );
+                    tampilan1.setText ( " Vr = I R" );
+                    tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
+                    tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan4.setText ( "  Xl = j omega L" );
+                    tampilan5.setText ( "  Xc = -j 1/(omega C) " );
                     Xc = 1/(omega2 * CC);
                     rr = Math.pow(rr,2);
                     Xc = Math.pow(Xc,2);
@@ -930,11 +937,11 @@ public class ArusBolakBalik extends AppCompatActivity {
                     I = vv/Z;
                     rr = Math.pow(rr,0.5);
                     Vr = I * rr;
-                        tampilan7.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-                        tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
-                        tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
-                        tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
-                        tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
+                    tampilan7.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    tampilan8.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
+                    tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
+                    tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
                 } else
 
                 if
@@ -974,21 +981,21 @@ public class ArusBolakBalik extends AppCompatActivity {
                 else
 
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
 
                     LL = LL/1000;
-                        tampilan1.setText ( " Vr = I R" );
-                        tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
-                        tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                        tampilan4.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan5.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    tampilan1.setText ( " Vr = I R" );
+                    tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
+                    tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan4.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan5.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
                     Xl = 6.28*freq2 * LL;
                     rr = Math.pow(rr,2);
                     Xlc = Math.pow(Xl,2);
@@ -997,30 +1004,30 @@ public class ArusBolakBalik extends AppCompatActivity {
                     I = vv/Z;
                     rr = Math.pow(rr,0.5);
                     Vr = I * rr;
-                        tampilan8.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-                        tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
-                        tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
-                        tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
+                    tampilan8.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    tampilan9.setText ( " Z =  " + df.format ( Z ) + "ohm" );
+                    tampilan10.setText ( " I =  " + df.format ( I ) + "ampere" );
+                    tampilan11.setText ( " VR = " + df.format ( Vr ) + "volt" );
                 }
                 else
 
                 if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
 
 
-                        tampilan1.setText ( " Vr = I R" );
-                        tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
-                        tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
-                        tampilan4.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan5.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    tampilan1.setText ( " Vr = I R" );
+                    tampilan2.setText ( " cari arus dari, i = Vrms/Z" );
+                    tampilan3.setText ( "  Z = ( R^2 + (Xl - Xc)^2 )^0,5" );
+                    tampilan4.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan5.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
                     Xc = 1/(6.28*freq2 * CC);
                     rr = Math.pow(rr,2);
                     Xlc = Math.pow(Xc,2);
@@ -1043,30 +1050,30 @@ public class ArusBolakBalik extends AppCompatActivity {
 
 
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !C.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !C.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
-                        tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
-                        tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan3.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
-                        tampilan4.setText ( "  phase = atan (Xl - Xc)/R" );
-                            Xc = 1/(6.28*freq2 * CC);
-                            Xl = 6.28*freq2 * LL;
+                    tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
+                    tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan3.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    tampilan4.setText ( "  phase = atan (Xl - Xc)/R" );
+                    Xc = 1/(6.28*freq2 * CC);
+                    Xl = 6.28*freq2 * LL;
 
                     tampilan6.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
                     tampilan7.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
                     Xlc = Xl - Xc;
-                            phase2 = Xlc/rr;
-                           phase2 =Math.atan(phase2);
-                           phase_der = phase2 * 57.32;
-                       tampilan9.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
+                    phase2 = Xlc/rr;
+                    phase2 =Math.atan(phase2);
+                    phase_der = phase2 * 57.32;
+                    tampilan9.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
                 } else
                 if
                 (!L.getText ( ).toString ( ).equals ( "" )   &&
@@ -1119,84 +1126,84 @@ public class ArusBolakBalik extends AppCompatActivity {
 
                 }else
 
-                    if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !C.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                        CC = CC/1000000;
-                        LL = LL/1000;
-                        tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
-                        tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan3.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
-                        Xc = 1/(omega2 * CC);
-                        Xl = omega2 * LL;
-                        tampilan5.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-                        tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
-                        Xlc = Xl - Xc;
-                        phase2 = Xlc/rr;
-                        phase2 =Math.atan(phase2);
-                        phase_der = phase2 * 57.32;
-                        tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !C.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    LL = LL/1000;
+                    tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
+                    tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan3.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    Xc = 1/(omega2 * CC);
+                    Xl = omega2 * LL;
+                    tampilan5.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    Xlc = Xl - Xc;
+                    phase2 = Xlc/rr;
+                    phase2 =Math.atan(phase2);
+                    phase_der = phase2 * 57.32;
+                    tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
 
-                    } else
-                    if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
+                } else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
 
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
 
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
 
-                        LL = LL/1000;
-                        tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
-                        tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan3.setText ( " C = 0 " );
-                        tampilan4.setText ( "  phase = atan (Xl)/R" );
-                        Xl = omega2 * LL;
-                        tampilan6.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    LL = LL/1000;
+                    tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
+                    tampilan2.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan3.setText ( " C = 0 " );
+                    tampilan4.setText ( "  phase = atan (Xl)/R" );
+                    Xl = omega2 * LL;
+                    tampilan6.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
 
-                        phase2 = Xl/rr;
-                        phase2 =Math.atan(phase2);
-                        phase_der = phase2 * 57.32;
-                        tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
-
-
-                    } else
-                    if
-                    (!C.getText ( ).toString ( ).equals ( "" )   &&
-
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                        CC = CC/1000000;
-
-                        tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
-                        tampilan2.setText ( "  L = 0" );
-                        tampilan3.setText ( " XC = -j/omega C = -j/(2 pi f C) " );
-                        tampilan4.setText ( "  phase = atan (Xl)/R" );
-                           Xc = 1/(omega2 * CC);
-
-                        tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
-                           phase2 = Xc/rr;
-                           phase2 =Math.atan(phase2);
-                           phase_der = phase2 * 57.32;
-                        tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
+                    phase2 = Xl/rr;
+                    phase2 =Math.atan(phase2);
+                    phase_der = phase2 * 57.32;
+                    tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
 
 
+                } else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+
+                    tampilan1.setText ( "  phase = atan (Xl - Xc)/R" );
+                    tampilan2.setText ( "  L = 0" );
+                    tampilan3.setText ( " XC = -j/omega C = -j/(2 pi f C) " );
+                    tampilan4.setText ( "  phase = atan (Xl)/R" );
+                    Xc = 1/(omega2 * CC);
+
+                    tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    phase2 = Xc/rr;
+                    phase2 =Math.atan(phase2);
+                    phase_der = phase2 * 57.32;
+                    tampilan7.setText ( " Phase = " + df.format ( phase2 ) + "rad  =   " +df.format ( phase_der ) + "derajat");
 
 
 
-                    }
+
+
+                }
             }}
         );
 
@@ -1206,22 +1213,22 @@ public class ArusBolakBalik extends AppCompatActivity {
                 DecimalFormat df = new DecimalFormat ( "#.###############" );
 
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !C.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !C.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
                     CC = CC/1000000;
                     LL = LL/1000;
-                        tampilan1.setText ( "  P = V I cos phase" );
-                        tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
-                        tampilan3.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    tampilan1.setText ( "  P = V I cos phase" );
+                    tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
+                    tampilan3.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
 
                     Xc = 1/(omega2 * CC);
                     Xl = omega2 * LL;
@@ -1246,11 +1253,11 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
                 } else
                 if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !C.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !C.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
                     LL = Double.parseDouble(L.getText().toString());
                     vv = Double.parseDouble(v.getText().toString());
                     CC = Double.parseDouble(C.getText().toString());
@@ -1263,23 +1270,23 @@ public class ArusBolakBalik extends AppCompatActivity {
                     tampilan3.setText("  Xl = j omega L = j 2 pi f L");
                     tampilan4.setText("  Xc = -j 1/(omega C) = - j/(2 pi f C) ");
 
-                        Xc = 1 / (6.28 * freq2 * CC);
-                        Xl = 6.28 * freq2 * LL;
+                    Xc = 1 / (6.28 * freq2 * CC);
+                    Xl = 6.28 * freq2 * LL;
                     tampilan6.setText(" Xc = -j " + df.format(Xc) + "ohm");
                     tampilan7.setText(" Xl = j " + df.format(Xl) + "ohm");
-                        Xlc = Xl - Xc;
-                        phase2 = Xlc / rr;
-                        phase2 = Math.atan(phase2);
+                    Xlc = Xl - Xc;
+                    phase2 = Xlc / rr;
+                    phase2 = Math.atan(phase2);
                     tampilan8.setText(" phase = " + df.format(phase2) + "radian");
-                        deg = phase2 * 57.32;
+                    deg = phase2 * 57.32;
                     tampilan9.setText(" phase = " + df.format(deg) + "derajat");
-                       rr = Math.pow(rr, 2);
-                       Xlc = Math.pow(Xlc, 2);
-                       Z = rr + Xlc;
-                       Z = Math.pow(Z, 0.5);
-                       I = vv / Z;
+                    rr = Math.pow(rr, 2);
+                    Xlc = Math.pow(Xlc, 2);
+                    Z = rr + Xlc;
+                    Z = Math.pow(Z, 0.5);
+                    I = vv / Z;
                     phase2 = Math.cos(phase2);
-                       P = vv * I * phase2;
+                    P = vv * I * phase2;
                     tampilan10.setText(" impedansi = " + df.format(Z) + "ohm");
                     tampilan11.setText(" tegangan = " + df.format(vv) + "volt");
                     tampilan12.setText(" arus = " + df.format(I) + "ampere");
@@ -1287,144 +1294,144 @@ public class ArusBolakBalik extends AppCompatActivity {
 
 
                 } else
-                    if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !omega.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble ( L.getText ( ).toString ( ) );
-                        vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                        rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                        omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                            LL = LL/1000;
-                        tampilan1.setText ( "  P = V I cos phase" );
-                        tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
-                        tampilan3.setText ( "  Xl = j omega L = j 2 pi f L" );
-                        tampilan4.setText ( "  C = 0 " );
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !omega.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble ( L.getText ( ).toString ( ) );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    LL = LL/1000;
+                    tampilan1.setText ( "  P = V I cos phase" );
+                    tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
+                    tampilan3.setText ( "  Xl = j omega L = j 2 pi f L" );
+                    tampilan4.setText ( "  C = 0 " );
 
-                             Xl = omega2 * LL;
+                    Xl = omega2 * LL;
 
-                        tampilan6.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
-                             phase2 = Xl/rr;
-                             phase2 =Math.atan(phase2);
-                        tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
-                             deg = phase2*57.32;
-                        tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
-                             rr = Math.pow(rr,2);
-                             Xl = Math.pow(Xl,2);
-                             Z = rr + Xl;
-                             Z = Math.pow(Z,0.5);
-                             I = vv/Z;
-                             phase2 = Math.cos(phase2);
-                             P = vv * I* phase2;
-                        tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
-                        tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
-                        tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
-                        tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
-                    } else
-                    if
-                    (!L.getText ( ).toString ( ).equals ( "" )   &&
-                            !v.getText ( ).toString ( ).equals ( "" )   &&
-                            !freq.getText ( ).toString ( ).equals ( "" )   &&
-                            !r.getText ( ).toString ( ).equals ( "" )) {
-                        LL = Double.parseDouble(L.getText().toString());
-                        vv = Double.parseDouble(v.getText().toString());
-                        rr = Double.parseDouble(r.getText().toString());
-                        freq2 = Double.parseDouble(freq.getText().toString());
-                        LL = LL / 1000;
-                        tampilan1.setText("  P = V I cos phase");
-                        tampilan2.setText("  phase = arctan{(Xl -Xc)/R}");
-                        tampilan3.setText("  Xl = j omega L = j 2 pi f L");
-                        tampilan4.setText("  C = 0 ");
-                            Xl = 6.28 * freq2 * LL;
-                        tampilan6.setText(" Xl = j " + df.format(Xl) + "ohm");
-                            phase2 = Xl / rr;
-                            phase2 = Math.atan(phase2);
-                        tampilan8.setText(" phase = " + df.format(phase2) + "radian");
-                            deg = phase2 * 57.32;
-                        tampilan9.setText(" phase = " + df.format(deg) + "derajat");
-                            rr = Math.pow(rr, 2);
-                            Xl = Math.pow(Xl, 2);
-                            Z = rr + Xl;
-                            Z = Math.pow(Z, 0.5);
-                            I = vv / Z;
-                            phase2 = Math.cos(phase2);
-                            P = vv * I * phase2;
-                        tampilan10.setText(" impedansi = " + df.format(Z) + "ohm");
-                        tampilan11.setText(" tegangan = " + df.format(vv) + "volt");
-                        tampilan12.setText(" arus = " + df.format(I) + "ampere");
-                        tampilan13.setText(" Daya = " + df.format(P) + "watt");
+                    tampilan6.setText ( " Xl = j " + df.format ( Xl ) + "ohm" );
+                    phase2 = Xl/rr;
+                    phase2 =Math.atan(phase2);
+                    tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
+                    deg = phase2*57.32;
+                    tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
+                    rr = Math.pow(rr,2);
+                    Xl = Math.pow(Xl,2);
+                    Z = rr + Xl;
+                    Z = Math.pow(Z,0.5);
+                    I = vv/Z;
+                    phase2 = Math.cos(phase2);
+                    P = vv * I* phase2;
+                    tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
+                    tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
+                    tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
+                    tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
+                } else
+                if
+                (!L.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    LL = Double.parseDouble(L.getText().toString());
+                    vv = Double.parseDouble(v.getText().toString());
+                    rr = Double.parseDouble(r.getText().toString());
+                    freq2 = Double.parseDouble(freq.getText().toString());
+                    LL = LL / 1000;
+                    tampilan1.setText("  P = V I cos phase");
+                    tampilan2.setText("  phase = arctan{(Xl -Xc)/R}");
+                    tampilan3.setText("  Xl = j omega L = j 2 pi f L");
+                    tampilan4.setText("  C = 0 ");
+                    Xl = 6.28 * freq2 * LL;
+                    tampilan6.setText(" Xl = j " + df.format(Xl) + "ohm");
+                    phase2 = Xl / rr;
+                    phase2 = Math.atan(phase2);
+                    tampilan8.setText(" phase = " + df.format(phase2) + "radian");
+                    deg = phase2 * 57.32;
+                    tampilan9.setText(" phase = " + df.format(deg) + "derajat");
+                    rr = Math.pow(rr, 2);
+                    Xl = Math.pow(Xl, 2);
+                    Z = rr + Xl;
+                    Z = Math.pow(Z, 0.5);
+                    I = vv / Z;
+                    phase2 = Math.cos(phase2);
+                    P = vv * I * phase2;
+                    tampilan10.setText(" impedansi = " + df.format(Z) + "ohm");
+                    tampilan11.setText(" tegangan = " + df.format(vv) + "volt");
+                    tampilan12.setText(" arus = " + df.format(I) + "ampere");
+                    tampilan13.setText(" Daya = " + df.format(P) + "watt");
 
 
-                    } else       if
-                        (!C.getText ( ).toString ( ).equals ( "" )   &&
+                } else       if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
                                 !v.getText ( ).toString ( ).equals ( "" )   &&
                                 !omega.getText ( ).toString ( ).equals ( "" )   &&
                                 !r.getText ( ).toString ( ).equals ( "" )) {
-                            vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                            CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                            rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                            omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
-                            CC = CC/1000000;
-                            tampilan1.setText ( "  P = V I cos phase" );
-                            tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
-                            tampilan3.setText ( "  L = 0" );
-                            tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    omega2 = Double.parseDouble ( omega.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    tampilan1.setText ( "  P = V I cos phase" );
+                    tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
+                    tampilan3.setText ( "  L = 0" );
+                    tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
 
-                            Xc = 1/(omega2 * CC);
-                            tampilan6.setText ( " Xc = -j" + df.format ( Xc ) + "ohm" );
+                    Xc = 1/(omega2 * CC);
+                    tampilan6.setText ( " Xc = -j" + df.format ( Xc ) + "ohm" );
 
-                            phase2 = Xc/rr;
-                            phase2 =Math.atan(phase2);
-                            tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
-                            deg = phase2*57.32;
-                            tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
-                            rr = Math.pow(rr,2);
-                            Xc = Math.pow(Xc,2);
-                            Z = rr + Xc;
-                            Z = Math.pow(Z,0.5);
-                            I = vv/Z;
-                            phase2 = Math.cos(phase2);
-                            P = vv * I* phase2;
-                            tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
-                            tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
-                            tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
-                            tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
-                        } else
-                        if
-                        (!C.getText ( ).toString ( ).equals ( "" )   &&
-                                !v.getText ( ).toString ( ).equals ( "" )   &&
-                                !freq.getText ( ).toString ( ).equals ( "" )   &&
-                                !r.getText ( ).toString ( ).equals ( "" )) {
-                            vv = Double.parseDouble ( v.getText ( ).toString ( ) );
-                            CC = Double.parseDouble ( C.getText ( ).toString ( ) );
-                            rr = Double.parseDouble ( r.getText ( ).toString ( ) );
-                            freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
-                            CC = CC/1000000;
-                            tampilan1.setText ( "  P = V I cos phase" );
-                            tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
-                            tampilan3.setText ( "  L = 0" );
-                            tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
+                    phase2 = Xc/rr;
+                    phase2 =Math.atan(phase2);
+                    tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
+                    deg = phase2*57.32;
+                    tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
+                    rr = Math.pow(rr,2);
+                    Xc = Math.pow(Xc,2);
+                    Z = rr + Xc;
+                    Z = Math.pow(Z,0.5);
+                    I = vv/Z;
+                    phase2 = Math.cos(phase2);
+                    P = vv * I* phase2;
+                    tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
+                    tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
+                    tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
+                    tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
+                } else
+                if
+                (!C.getText ( ).toString ( ).equals ( "" )   &&
+                        !v.getText ( ).toString ( ).equals ( "" )   &&
+                        !freq.getText ( ).toString ( ).equals ( "" )   &&
+                        !r.getText ( ).toString ( ).equals ( "" )) {
+                    vv = Double.parseDouble ( v.getText ( ).toString ( ) );
+                    CC = Double.parseDouble ( C.getText ( ).toString ( ) );
+                    rr = Double.parseDouble ( r.getText ( ).toString ( ) );
+                    freq2 = Double.parseDouble ( freq.getText ( ).toString ( ) );
+                    CC = CC/1000000;
+                    tampilan1.setText ( "  P = V I cos phase" );
+                    tampilan2.setText ( "  phase = arctan{(Xl -Xc)/R}" );
+                    tampilan3.setText ( "  L = 0" );
+                    tampilan4.setText ( "  Xc = -j 1/(omega C) = - j/(2 pi f C) " );
 
-                            Xc = 1/(6.28*freq2 * CC);
-                            tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
+                    Xc = 1/(6.28*freq2 * CC);
+                    tampilan6.setText ( " Xc = -j " + df.format ( Xc ) + "ohm" );
 
-                            phase2 = Xc/rr;
-                            phase2 =Math.atan(phase2);
-                            tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
-                            deg = phase2*57.32;
-                            tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
-                            rr = Math.pow(rr,2);
-                            Xc = Math.pow(Xc,2);
-                            Z = rr + Xc;
-                            Z = Math.pow(Z,0.5);
-                            I = vv/Z;
-                            phase2 = Math.cos(phase2);
-                            P = vv * I* phase2;
-                            tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
-                            tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
-                            tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
-                            tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
+                    phase2 = Xc/rr;
+                    phase2 =Math.atan(phase2);
+                    tampilan8.setText ( " phase = " + df.format ( phase2 ) + "radian" );
+                    deg = phase2*57.32;
+                    tampilan9.setText ( " phase = " + df.format ( deg ) + "derajat" );
+                    rr = Math.pow(rr,2);
+                    Xc = Math.pow(Xc,2);
+                    Z = rr + Xc;
+                    Z = Math.pow(Z,0.5);
+                    I = vv/Z;
+                    phase2 = Math.cos(phase2);
+                    P = vv * I* phase2;
+                    tampilan10.setText ( " impedansi = " + df.format ( Z ) + "ohm" );
+                    tampilan11.setText ( " tegangan = " + df.format ( vv ) + "volt" );
+                    tampilan12.setText ( " arus = " + df.format ( I ) + "ampere" );
+                    tampilan13.setText ( " Daya = " + df.format ( P ) + "watt" );
 
 
 
@@ -1486,6 +1493,8 @@ public class ArusBolakBalik extends AppCompatActivity {
                 CC = Double.parseDouble ( C.getText ( ).toString ( ) );
 
                 if ( CC != 0 &&  LL !=0 ) {
+                    CC = CC/1000000;
+                    LL = LL/1000;
                     tampilan1.setText ( " fo =Wo/ 2 pi;  Wo = 1/(L C)^0,5" );
                     WoWo = LL * CC;
                     WoWo = Math.pow(WoWo,0.5);
